@@ -14,21 +14,22 @@ namespace TDD.Communications
             int likeCount = inputs.Count(o => o == OutCome.LIKE);
             int dislikeCount = inputs.Count(o => o == OutCome.DISLIKE);
 
-            if (dislikeCount == 0 && likeCount > 0)
+
+            if(likeCount % 2 == 0 || dislikeCount % 2 == 0)
+            {
+                return OutCome.NEUTRAL;
+            }
+
+            if(likeCount > 0 && dislikeCount == 0)
             {
                 return OutCome.LIKE;
             }
-            if(dislikeCount > 0 && likeCount == 0)
+            if (dislikeCount > 0 && likeCount == 0)
             {
                 return OutCome.DISLIKE;
             }
-            //fallback
-            return OutCome.NEUTRAL;
-            ///let input = {L, L, L, D, L L}
-            //likecount = 4
-            //dislikexout = 1
-            //if(1 ==0 && 4>0) false so does not execute 
 
+            return OutCome.NEUTRAL;
 
         }
     }
