@@ -56,6 +56,6 @@ public class MoodTest
         var moodCheck = new Mood();
         OutCome[] input = { OutCome.LIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE };
         var result = moodCheck.EvaluateMoods(input);
-        result.ShouldBe(OutCome.DISLIKE);
+        result.ShouldBe(OutCome.LIKE);
     }
 }

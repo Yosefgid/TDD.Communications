@@ -11,20 +11,19 @@ namespace TDD.Communications
     {
         public OutCome EvaluateMoods(OutCome[] inputs)
         {
-            int likeCount = inputs.Count(o => o == OutCome.LIKE);
-            int dislikeCount = inputs.Count(o => o == OutCome.DISLIKE);
+            int likeCount = inputs.Count(o => o == OutCome.LIKE) % 2;
+            int dislikeCount = inputs.Count(o => o == OutCome.DISLIKE) % 2;
 
-
-            if((likeCount % 2 == 0 && likeCount > 0) || (dislikeCount % 2 == 0 && dislikeCount > 0))
+            if(likeCount == 1 && dislikeCount ==1)
             {
                 return OutCome.NEUTRAL;
             }
 
-            if(likeCount > 0 && dislikeCount == 0)
+            if(likeCount == 1)
             {
                 return OutCome.LIKE;
             }
-            if (dislikeCount > 0 && likeCount == 0)
+            if (dislikeCount == 1)
             {
                 return OutCome.DISLIKE;
             }
