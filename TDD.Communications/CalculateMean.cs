@@ -10,7 +10,7 @@ namespace TDD.Communications
         {
         public double CalculateMean(int[] num)
         {
-            return num[0];
+            return num.Average();
         }
     }
 }
