@@ -51,7 +51,7 @@ public class MoodTest
 
 
     [Test]
-    public void CheckMood_WhereSequenceOutcomes_ReturnsNeutral()
+    public void CheckMood_WhereSequenceOutcomes_ReturnsLike()
     {
         var moodCheck = new Mood();
         OutCome[] input = { OutCome.LIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE };
