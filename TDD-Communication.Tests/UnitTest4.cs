@@ -54,8 +54,8 @@ public class MoodTest
     public void CheckMood_WhereSequenceOutcomes_ReturnsNeutral()
     {
         var moodCheck = new Mood();
-        OutCome[] input = { OutCome.LIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE, OutCome.LIKE, OutCome.LIKE };
+        OutCome[] input = { OutCome.LIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE, OutCome.LIKE, OutCome.LIKE, OutCome.DISLIKE };
         var result = moodCheck.EvaluateMoods(input);
-        result.ShouldBe(OutCome.NEUTRAL);
+        result.ShouldBe(OutCome.DISLIKE);
     }
 }

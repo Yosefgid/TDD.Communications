@@ -15,7 +15,7 @@ namespace TDD.Communications
             int dislikeCount = inputs.Count(o => o == OutCome.DISLIKE);
 
 
-            if(likeCount % 2 == 0 || dislikeCount % 2 == 0)
+            if((likeCount % 2 == 0 && likeCount > 0) || (dislikeCount % 2 == 0 && dislikeCount > 0))
             {
                 return OutCome.NEUTRAL;
             }
