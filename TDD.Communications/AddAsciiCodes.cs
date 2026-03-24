@@ -12,7 +12,10 @@ namespace TDD.Communications
         {
 
             //casting a char into an int produces its ASCII values
-            return (int)input[0];
+            //return (int)input[0];
+            return input.Sum(x => (int)x);
+
+
         }
     }
 }

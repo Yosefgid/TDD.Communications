@@ -11,8 +11,8 @@ public class AddAsciiCodesTest
     public void AddAsciiCodes_WithSingleChar_ReturnsAsciiValue()
     {
         var calculator = new AddAsciiCodes();
-        string input = "a";
+        string input = "northcoders";
         var result = calculator.AddAscii_Codes(input);
-        result.ShouldBe(97);
+        result.ShouldBe(1195);
     }
 }
